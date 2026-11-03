@@ -337,4 +337,17 @@ app.delete('/api/complaints/:id', async (req, res) => {
 });
 
 // Start Express Server
+// Serve React frontend
+const frontendPath = path.resolve(__dirname, '../dist');
 
+app.use(express.static(frontendPath));
+
+// React homepage
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+// Start Express Server
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
