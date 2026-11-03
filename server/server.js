@@ -337,6 +337,4 @@ app.delete('/api/complaints/:id', async (req, res) => {
 });
 
 // Start Express Server
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+
