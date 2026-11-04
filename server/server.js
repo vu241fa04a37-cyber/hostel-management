@@ -38,7 +38,7 @@ async function seedMongoDBIfEmpty() {
     const roomCount = await RoomModel.countDocuments();
     if (roomCount === 0) {
       console.log('📦 MongoDB database is empty. Seeding initial enterprise dataset...');
-      
+
       // Seed all collections
       await RoomModel.insertMany(defaultHostelData.rooms);
       await StudentModel.insertMany(defaultHostelData.students);
@@ -979,12 +979,18 @@ app.delete('/api/notices/:id', async (req, res) => {
   }
 });
 
-// Root & Server Listen
-app.get('/', (req, res) => {
-  res.send('Elite Hostel PMS Backend API connected to MongoDB Compass (localhost:27017)');
+// Start Express Server
+// Serve React frontend
+const frontendPath = path.resolve(__dirname, '../dist');
+
+app.use(express.static(frontendPath));
+
+// React homepage
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Elite Hostel Backend running on http://localhost:${PORT}`);
-  console.log(`🍃 Connected to MongoDB Compass at: mongodb://localhost:27017/hostelDB`);
+// Start Express Server
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
 });

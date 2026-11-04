@@ -1171,8 +1171,8 @@ export default function App() {
                 setLoginError('');
               }}
               className={`flex items-center justify-center gap-2 py-2.5 rounded-xl transition ${loginRole === 'admin'
-                  ? 'bg-indigo-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                ? 'bg-indigo-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-white'
                 }`}
             >
               <Shield className="w-4 h-4" />
@@ -1188,8 +1188,8 @@ export default function App() {
                 setLoginError('');
               }}
               className={`flex items-center justify-center gap-2 py-2.5 rounded-xl transition ${loginRole === 'student'
-                  ? 'bg-violet-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                ? 'bg-violet-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-white'
                 }`}
             >
               <User className="w-4 h-4" />
@@ -1250,8 +1250,8 @@ export default function App() {
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-3 text-white font-extrabold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs uppercase tracking-wider ${loginRole === 'admin'
-                  ? 'bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 shadow-indigo-600/30'
-                  : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 shadow-violet-600/30'
+                ? 'bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 shadow-indigo-600/30'
+                : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 shadow-violet-600/30'
                 }`}
             >
               <LogIn className="w-4 h-4" />
@@ -1354,8 +1354,8 @@ export default function App() {
                   </h1>
                   <span
                     className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider border ${isAdmin
-                        ? 'bg-indigo-500/20 text-indigo-300 border-indigo-400/30'
-                        : 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30'
+                      ? 'bg-indigo-500/20 text-indigo-300 border-indigo-400/30'
+                      : 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30'
                       }`}
                   >
                     {isAdmin ? 'ADMIN PORTAL' : `RESIDENT (${currentUser.roomNumber || 'PORTAL'})`}
@@ -1448,8 +1448,8 @@ export default function App() {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${isActive
-                        ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                      ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30'
+                      : 'text-slate-300 hover:text-white hover:bg-slate-800'
                       }`}
                   >
                     <Icon className="w-3.5 h-3.5" />
@@ -1486,8 +1486,8 @@ export default function App() {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${isActive
-                        ? 'bg-violet-600 text-white shadow-sm shadow-violet-600/30'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                      ? 'bg-violet-600 text-white shadow-sm shadow-violet-600/30'
+                      : 'text-slate-300 hover:text-white hover:bg-slate-800'
                       }`}
                   >
                     <Icon className="w-3.5 h-3.5" />
@@ -1666,8 +1666,8 @@ export default function App() {
                             <button
                               onClick={() => toggleFeeStatus(f.id)}
                               className={`px-3 py-1 rounded-lg font-bold text-xs ${f.status === 'Paid'
-                                  ? 'bg-emerald-100 text-emerald-800'
-                                  : 'bg-emerald-600 text-white hover:bg-emerald-700'
+                                ? 'bg-emerald-100 text-emerald-800'
+                                : 'bg-emerald-600 text-white hover:bg-emerald-700'
                                 }`}
                             >
                               {f.status === 'Paid' ? 'Paid ✓' : 'Pay Now'}
@@ -1901,8 +1901,8 @@ export default function App() {
                         key={day}
                         onClick={() => setActiveMenuDay(day)}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${activeMenuDay === day
-                            ? 'bg-violet-600 text-white shadow-xs'
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                          ? 'bg-violet-600 text-white shadow-xs'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                           }`}
                       >
                         {day.slice(0, 3)}
@@ -2342,10 +2342,10 @@ export default function App() {
                             </div>
                             <span
                               className={`text-xs font-bold px-2.5 py-1 rounded-full ${room.status === 'Maintenance'
-                                  ? 'bg-rose-100 text-rose-700'
-                                  : isFull
-                                    ? 'bg-slate-200 text-slate-700'
-                                    : 'bg-emerald-100 text-emerald-800'
+                                ? 'bg-rose-100 text-rose-700'
+                                : isFull
+                                  ? 'bg-slate-200 text-slate-700'
+                                  : 'bg-emerald-100 text-emerald-800'
                                 }`}
                             >
                               {room.status === 'Maintenance' ? 'Under Maintenance' : isFull ? 'Full Occupancy' : 'Available'}
@@ -2372,8 +2372,8 @@ export default function App() {
                                 <div
                                   key={bed.bedNumber}
                                   className={`flex items-center justify-between p-2 rounded-xl text-xs border ${bed.studentName
-                                      ? 'bg-indigo-50/60 border-indigo-100 text-indigo-900'
-                                      : 'bg-slate-50 border-dashed border-slate-200 text-slate-400'
+                                    ? 'bg-indigo-50/60 border-indigo-100 text-indigo-900'
+                                    : 'bg-slate-50 border-dashed border-slate-200 text-slate-400'
                                     }`}
                                 >
                                   <div className="flex items-center gap-2">
@@ -2635,10 +2635,10 @@ export default function App() {
                             <td className="py-3.5 px-4">
                               <span
                                 className={`px-2.5 py-1 rounded-full text-[10px] font-extrabold ${fee.status === 'Paid'
-                                    ? 'bg-emerald-100 text-emerald-800'
-                                    : fee.status === 'Overdue'
-                                      ? 'bg-rose-100 text-rose-800'
-                                      : 'bg-amber-100 text-amber-800'
+                                  ? 'bg-emerald-100 text-emerald-800'
+                                  : fee.status === 'Overdue'
+                                    ? 'bg-rose-100 text-rose-800'
+                                    : 'bg-amber-100 text-amber-800'
                                   }`}
                               >
                                 {fee.status}
@@ -2649,8 +2649,8 @@ export default function App() {
                                 <button
                                   onClick={() => toggleFeeStatus(fee.id)}
                                   className={`px-2.5 py-1 rounded-lg text-[10px] font-bold transition ${fee.status === 'Paid'
-                                      ? 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                                      : 'bg-emerald-600 text-white hover:bg-emerald-700'
+                                    ? 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                                    : 'bg-emerald-600 text-white hover:bg-emerald-700'
                                     }`}
                                 >
                                   {fee.status === 'Paid' ? 'Mark Pending' : 'Mark Paid'}
@@ -2721,10 +2721,10 @@ export default function App() {
                             <span className="font-mono font-bold text-xs text-indigo-700">{c.ticketNo}</span>
                             <span
                               className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${c.priority === 'Urgent'
-                                  ? 'bg-rose-100 text-rose-700'
-                                  : c.priority === 'High'
-                                    ? 'bg-amber-100 text-amber-700'
-                                    : 'bg-slate-100 text-slate-700'
+                                ? 'bg-rose-100 text-rose-700'
+                                : c.priority === 'High'
+                                  ? 'bg-amber-100 text-amber-700'
+                                  : 'bg-slate-100 text-slate-700'
                                 }`}
                             >
                               {c.priority}
@@ -2762,8 +2762,8 @@ export default function App() {
                         <button
                           onClick={() => toggleComplaintStatus(c.id)}
                           className={`px-3 py-1.5 rounded-xl font-bold transition text-xs ${c.status === 'Resolved'
-                              ? 'border border-slate-200 text-slate-600 hover:bg-slate-100'
-                              : 'bg-emerald-600 text-white hover:bg-emerald-700'
+                            ? 'border border-slate-200 text-slate-600 hover:bg-slate-100'
+                            : 'bg-emerald-600 text-white hover:bg-emerald-700'
                             }`}
                         >
                           {c.status === 'Resolved' ? 'Reopen Ticket' : 'Mark Resolved'}
@@ -2805,8 +2805,8 @@ export default function App() {
                         key={day}
                         onClick={() => setActiveMenuDay(day)}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${activeMenuDay === day
-                            ? 'bg-indigo-600 text-white shadow-xs'
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                          ? 'bg-indigo-600 text-white shadow-xs'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                           }`}
                       >
                         {day.slice(0, 3)}
@@ -2903,8 +2903,8 @@ export default function App() {
                               <span className="font-black text-slate-900 text-sm">{v.visitorName}</span>
                               <span
                                 className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.status === 'Currently Inside'
-                                    ? 'bg-amber-100 text-amber-800'
-                                    : 'bg-slate-100 text-slate-600'
+                                  ? 'bg-amber-100 text-amber-800'
+                                  : 'bg-slate-100 text-slate-600'
                                   }`}
                               >
                                 {v.status}
